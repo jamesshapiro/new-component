@@ -47,7 +47,7 @@ $ npm i -g new-component
 $ new-component MyNewComponent
 ```
 
-Your project will now have a new directory at `src/components/MyNewComponent`. This directory has two files:
+Your project will now have a new directory at `src/components/MyNewComponent`. This directory has three files:
 
 ```jsx
 // `MyNewComponent/index.js`
@@ -57,16 +57,22 @@ export { default } from './MyNewComponent';
 ```jsx
 // `MyNewComponent/MyNewComponent.js`
 import React from 'react';
+import * as style from './MyNewComponent.module.css'
 
 function MyNewComponent() {
-  return <div></div>;
+  return (
+    <>
+    </>
+  );
 }
 
 export default MyNewComponent;
+
 ```
 
-These files will be formatted according to your Prettier configuration.
-
+```jsx
+// `MyNewComponent/MyNewComponent.module.css`
+```
 <br />
 
 ## Configuration
@@ -112,7 +118,7 @@ JSON config: `{ "dir": <value> }`
 
 ## Platform Support
 
-This has only been tested in macOS. I think it'd work fine in linux, but I haven't tested it. Windows is a big question mark.
+This has only been tested in macOS. I think it'd work fine in linux, but I haven't tested it. Windows is a big question mark. Note: now also works in Ubuntu on WSL!
 <br />
 
 ## Development
